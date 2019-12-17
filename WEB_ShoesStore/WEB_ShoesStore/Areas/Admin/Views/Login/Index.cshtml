@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LoginAdminLayout.cshtml";
+}
+@model WEB_ShoesStore.Areas.Admin.Models.LoginModel
+<div class="login">
+    <div class="wrap">
+        <div class="col_1_of_login span_1_of_login">
+            <div class="login-title">
+                <h4 class="title">ADMIN</h4>
+                <div class="comments-area">
+                    @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(false, " ", new { @class = "text-danger" });
+                        <p>
+                            @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", @autofocus = "autofocus" })
+                            <!--
+                            Read more: https://html.com/tags/comment-tag/#ixzz62dsuuiU7 <label>Name</label>
+                            <span>*</span>
+                            <input type="text" value=""> -->
+                        </p>
+                        <p>
+                            @Html.PasswordFor(model => model.Password, new { @class = "form-control", @type = "password" })
+                            <!--   <label>Password</label>
+                                <span>*</span>
+                                <input type="password" value="">-->
+                        </p>
+                            <p id="login-form-remember">
+                                <label><a href="#">Forget Your Password ? </a></label>
+                            </p>
+                            <p>
+                                <input type="submit" value="Login">
+                            </p>
+                    }
+
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div> 

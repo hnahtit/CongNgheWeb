@@ -109,6 +109,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Admin\bootstrap-theme.css" />
+    <Content Include="Content\Admin\bootstrap-theme.min.css" />
+    <Content Include="Content\Admin\bootstrap.css" />
+    <Content Include="Content\Admin\bootstrap.min.css" />
+    <Content Include="Content\Admin\bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="Content\Admin\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\Admin\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="Content\Admin\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="Content\Admin\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\Admin\css\theme.css" />
+    <Content Include="Content\Admin\images\bg.png" />
+    <Content Include="Content\Admin\images\icons\css\font-awesome.css" />
+    <Content Include="Content\Admin\images\img.jpg" />
+    <Content Include="Content\Admin\images\jquery-ui\picker.png" />
+    <Content Include="Content\Admin\images\user.png" />
+    <Content Include="Content\Admin\scripts\common.js" />
+    <Content Include="Content\Admin\scripts\datatables\jquery.dataTables.js" />
+    <Content Include="Content\Admin\scripts\flot\jquery.flot.js" />
+    <Content Include="Content\Admin\scripts\flot\jquery.flot.pie.js" />
+    <Content Include="Content\Admin\scripts\flot\jquery.flot.resize.js" />
+    <Content Include="Content\Admin\scripts\jquery-1.9.1.min.js" />
+    <Content Include="Content\Admin\scripts\jquery-ui-1.10.1.custom.min.js" />
+    <Content Include="Content\Admin\Site.css" />
     <Content Include="Content\css\etalage.css" />
     <Content Include="Content\css\form.css" />
     <Content Include="Content\css\megamenu.css" />
@@ -214,10 +237,20 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Code\SessionHelper.cs" />
+    <Compile Include="Areas\Admin\Code\UserSession.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdminDanhMucController.cs" />
+    <Compile Include="Areas\Admin\Controllers\BaseController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Admin\Models\LoginModel.cs" />
+    <Compile Include="Common\CommonConstant.cs" />
+    <Compile Include="Common\UserLogin.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Dao\UserDao.cs" />
     <Compile Include="Models\Entities\Account_Admin.cs" />
     <Compile Include="Models\Entities\Attribute.cs" />
     <Compile Include="Models\Entities\Attribute_Type.cs" />
@@ -232,6 +265,7 @@
     <Compile Include="Models\Entities\ShoesDBContext.cs" />
     <Compile Include="Models\Entities\User.cs" />
     <Compile Include="Models\Entities\UserGroup.cs" />
+    <Compile Include="Models\Functions\F_AdminAccount.cs" />
     <Compile Include="Models\Functions\F_Manufactor.cs" />
     <Compile Include="Models\Functions\F_Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -265,6 +299,21 @@
     <Content Include="Views\Shared\_LayoutSingle.cshtml" />
     <Content Include="Views\Home\Shop.cshtml" />
     <Content Include="Views\Home\Single.cshtml" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_LoginAdminLayout.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_MyAdminLayout.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminDanhMuc\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminDanhMuc\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminDanhMuc\Edit.cshtml" />
+    <Content Include="Content\Admin\bootstrap-theme.css.map" />
+    <Content Include="Content\Admin\bootstrap-theme.min.css.map" />
+    <Content Include="Content\Admin\bootstrap.css.map" />
+    <Content Include="Content\Admin\bootstrap.min.css.map" />
+    <Content Include="Content\Admin\images\icons\font\fontawesome-webfont3294.eot" />
+    <Content Include="Content\Admin\images\icons\font\fontawesome-webfont3294.ttf" />
+    <Content Include="Content\Admin\images\icons\font\fontawesome-webfont3294.woff" />
+    <Content Include="Content\Admin\images\icons\font\fontawesome-webfontd41d.eot" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -274,6 +323,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Views\Base\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
