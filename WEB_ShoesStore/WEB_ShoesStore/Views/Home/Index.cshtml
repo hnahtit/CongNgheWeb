@@ -3,88 +3,77 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@using Shoes_Shop_main.Models.Entities
+@using WEB_ShoesStore.Models.Entities
 @model List<Product>
 
-
-
-<div class="search">
-    <form method="post" action="/Home/Search">
-        <input type="text" name="s" class="textbox" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
-        <input type="submit" value="Submit" id="submit" name="submit">
-        <div id="response"> </div>
-    </form>
-</div><div class="clear"></div>
-
-
 <div class="index-banner">
-    <div class="wmuSlider example1" style="height: 560px;">
+    <div class="wmuSlider example1" style="height: 320px;">
         <div class="wmuSliderWrapper">
-            <article style="position: relative; width: 100%; opacity: 1;">
+            <article style="position: center; width: 50%; opacity: 1;">
                 <div class="banner-wrap">
                     <div class="slider-left">
-                        <img src="~/Content/images/banner1.jpg" alt="" />
+                        <img src="~/Content/images/nikemag/n2.jpg" alt="" />
                     </div>
                     <div class="slider-right">
-                        <h1>Classic</h1>
-                        <h2>White</h2>
-                        <p>Lorem ipsum dolor sit amet</p>
+                        <h1>NIKE</h1>
+                        <h2>MAG</h2>
+                        <p>Sáng tạo đến từ tương lai</p>
                         <div class="btn"><a href="/Home/Shop">Shop Now</a></div>
                     </div>
                     <div class="clear"></div>
                 </div>
             </article>
-            <article style="position: absolute; width: 100%; opacity: 0;">
+            <article style="position: fixed; width: 100%; opacity: 1;">
                 <div class="banner-wrap">
                     <div class="slider-left">
-                        <img src="~/Content/images/banner2.jpg" alt="" />
+                        <img src="~/Content/images/lebronsoldier/lb4.jpg" alt="" />
                     </div>
                     <div class="slider-right">
-                        <h1>Classic</h1>
-                        <h2>White</h2>
-                        <p>Lorem ipsum dolor sit amet</p>
+                        <h1>LEBRON</h1>
+                        <h2>SOLDIER</h2>
+                        <p>Đôi giày tạo nên sự phá cách</p>
                         <div class="btn"><a href="/Home/Shop">Shop Now</a></div>
                     </div>
                     <div class="clear"></div>
                 </div>
             </article>
-            <article style="position: absolute; width: 100%; opacity: 0;">
+            <article style="position: absolute; width: 50%; opacity: 1;">
                 <div class="banner-wrap">
                     <div class="slider-left">
-                        <img src="~/Content/images/banner1.jpg" alt="" />
+                        <img src="~/Content/images/bitis/bt2.jpg" alt="" />
                     </div>
                     <div class="slider-right">
-                        <h1>Classic</h1>
-                        <h2>White</h2>
-                        <p>Lorem ipsum dolor sit amet</p>
+                        <h1>BITIS</h1>
+                        <h2>HUNTER X</h2>
+                        <p>Đi để trở về</p>
                         <div class="btn"><a href="/Home/Shop">Shop Now</a></div>
                     </div>
                     <div class="clear"></div>
                 </div>
             </article>
-            <article style="position: absolute; width: 100%; opacity: 0;">
+            <article style="position: absolute; width: 100%; opacity: 1;">
                 <div class="banner-wrap">
                     <div class="slider-left">
-                        <img src="~/Content/images/banner2.jpg" alt="" />
+                        <img src="~/Content/images/lattitude720/nm5.jpg" alt="" />
                     </div>
                     <div class="slider-right">
-                        <h1>Classic</h1>
-                        <h2>White</h2>
-                        <p>Lorem ipsum dolor sit amet</p>
+                        <h1>LATTITUDE</h1>
+                        <h2>SO720</h2>
+                        <p>Mạnh mẽ đến từ đôi bàn chân</p>
                         <div class="btn"><a href="/Home/Shop">Shop Now</a></div>
                     </div>
                     <div class="clear"></div>
                 </div>
             </article>
-            <article style="position: absolute; width: 100%; opacity: 0;">
+            <article style="position: absolute; width: 100%; opacity: 1;">
                 <div class="banner-wrap">
                     <div class="slider-left">
-                        <img src="~/Content/images/banner1.jpg" alt="" />
+                        <img src="~/Content/images/jd7netro/jd5.jpg" alt="" />
                     </div>
                     <div class="slider-right">
-                        <h1>Classic</h1>
-                        <h2>White</h2>
-                        <p>Lorem ipsum dolor sit amet</p>
+                        <h1>JD7</h1>
+                        <h2>NETRO</h2>
+                        <p>Bước chân nhẹ nhàng</p>
                         <div class="btn"><a href="/Home/Shop">Shop Now</a></div>
                     </div>
                     <div class="clear"></div>

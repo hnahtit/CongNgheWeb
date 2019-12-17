@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WEB_ShoesStore.Models.Functions;
 
 namespace WEB_ShoesStore.Controllers
 {
@@ -11,7 +12,8 @@ namespace WEB_ShoesStore.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            var model = new F_Product().DS_Product.ToList();
+            return View(model);
         }
         public ActionResult Checkout()
         {
@@ -30,21 +32,16 @@ namespace WEB_ShoesStore.Controllers
             return View();
         }
         public ActionResult Single(string id)
-        {   /*
+        {   
             var model = new F_Product().FindEntity(id);
             return View(model);
-            */
-            return View();
         }
         [HttpPost]
         public ActionResult Search(string s)
-        {
-            /*
+        {     
             var model = new F_Product().DS_Product.Where(x => x.Product_Name.Contains(s)).ToList();
             ViewBag.SP = model;
             return View("Index", model);
-            */
-            return View();
         }
     }
 }
