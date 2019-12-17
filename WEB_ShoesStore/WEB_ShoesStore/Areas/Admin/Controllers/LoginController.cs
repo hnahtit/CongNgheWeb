@@ -58,7 +58,7 @@ namespace WEB_ShoesStore.Areas.Admin.Controllers
         public ActionResult Logout()
         {
             Session[Common.CommonConstant.USER_SESSION] = null;
-            return Redirect("Index");
+            return Redirect("~/Home/Login");
         }
     }
 }

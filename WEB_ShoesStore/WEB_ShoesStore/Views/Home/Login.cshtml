@@ -3,40 +3,65 @@
     ViewBag.Title = "Login";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+@model WEB_ShoesStore.Areas.Admin.Models.LoginModel
 <div class="login">
     <div class="wrap">
         <div class="col_1_of_login span_1_of_login">
-            <h4 class="title">New Customers</h4>
-            <h5 class="sub_title">/Home/Register Account</h5>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan</p>
+            <h4 class="title">Nếu chưa có tài khoản?</h4>
+            <h5 class="sub_title">Đăng ký thành viên mới tại đây!</h5>
+            <p>Store bán giày luôn cập nhật các sản phẩm mới nhất, thời trang nhất để phục vụ quý khách hàng. Bên cạnh đó store luôn có các chương trình khuyến mãi, giảm giá hết sức ưu đãi.Để mua sắm và đặt hàng các sản phẩm của store bạn phải có tài khoản để thực hiện thanh toán và tích lũy điểm để hưởng ưu đãi những lần mua sắm sau nhé ^.^</p>
             <div class="button1">
-                <a href="/Home/Register.html"><input type="submit" name="Submit" value="Continue"></a>
+                <a href="/Home/Register"><input type="submit" name="Submit" value="Tiếp tục"></a>
             </div>
             <div class="clear"></div>
         </div>
         <div class="col_1_of_login span_1_of_login">
             <div class="login-title">
-                <h4 class="title">/Home/Registered Customers</h4>
+                <h4 class="title">ĐĂNG NHẬP</h4>
                 <div class="comments-area">
-                    <form>
+                    <!-- <form>
+
                         <p>
-                            <label>Name</label>
+                            <label>Tên đăng nhập</label>
                             <span>*</span>
                             <input type="text" value="">
                         </p>
                         <p>
-                            <label>Password</label>
+                            <label>Mật khẩu</label>
                             <span>*</span>
                             <input type="password" value="">
                         </p>
                         <p id="login-form-remember">
-                            <label><a href="#">Forget Your Password ? </a></label>
+                            <label><a href="#"> Quên mật khẩu ? </a></label>
                         </p>
                         <p>
-                            <input type="submit" value="Login">
+                            <input type="submit" value="Đăng nhập">
                         </p>
-                    </form>
+                    </form>-->
+                    @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(false, " ", new { @class = "text-danger" });
+                        <p>
+                            <label>Tên đăng nhập</label>
+                            <span>*</span>
+                            @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", @autofocus = "autofocus" })
+                        
+                        </p>
+                        <p>
+                            <label>Mật khẩu</label>
+                            <span>*</span>
+                            @Html.PasswordFor(model => model.Password, new { @class = "form-control", @type = "password" })
+     
+                        </p>
+                        <p id="login-form-remember">
+                            <label><a href="#">Quên mật khẩu ? </a></label>
+                        </p>
+                            <p>
+                                <input type="submit" value="Đăng Nhập">
+                            </p>
+                    }
+                    
                 </div>
             </div>
         </div>
