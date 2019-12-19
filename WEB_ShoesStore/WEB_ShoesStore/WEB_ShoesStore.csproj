@@ -222,7 +222,7 @@
     <Content Include="Content\images\us.png" />
     <Content Include="Content\images\wish.png" />
     <Content Include="Content\images\zoom.png" />
-    <Content Include="Content\js\cartController.js" />
+    <Content Include="Content\js\controller\cartController.js" />
     <Content Include="Content\js\easing.js" />
     <Content Include="Content\js\jquery.etalage.min.js" />
     <Content Include="Content\js\jquery.flexisel.js" />
@@ -246,10 +246,13 @@
     <Compile Include="Areas\Admin\Models\LoginModel.cs" />
     <Compile Include="Common\CommonConstant.cs" />
     <Compile Include="Common\UserLogin.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Dao\OrderDao.cs" />
+    <Compile Include="Models\Dao\OrderDetailDao.cs" />
     <Compile Include="Models\Dao\UserDao.cs" />
     <Compile Include="Models\Entities\Account_Admin.cs" />
     <Compile Include="Models\Entities\Attribute.cs" />
@@ -266,8 +269,10 @@
     <Compile Include="Models\Entities\User.cs" />
     <Compile Include="Models\Entities\UserGroup.cs" />
     <Compile Include="Models\Functions\F_AdminAccount.cs" />
+    <Compile Include="Models\Functions\F_CartItem.cs" />
     <Compile Include="Models\Functions\F_Manufactor.cs" />
     <Compile Include="Models\Functions\F_Product.cs" />
+    <Compile Include="Models\Functions\F_RegisterModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -314,6 +319,10 @@
     <Content Include="Content\Admin\images\icons\font\fontawesome-webfont3294.ttf" />
     <Content Include="Content\Admin\images\icons\font\fontawesome-webfont3294.woff" />
     <Content Include="Content\Admin\images\icons\font\fontawesome-webfontd41d.eot" />
+    <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Cart\Payment.cshtml" />
+    <Content Include="Views\Cart\Success.cshtml" />
+    <Content Include="Views\Cart\Error.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

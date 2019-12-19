@@ -90,7 +90,7 @@
         <div class="wrap">
             <!-- start header menu -->
             <ul class="megamenu skyblue">
-                <li><a class="color1" href="#">Tranh chủ</a></li>
+                 <li><a class="color1" href="/Home/Index">Trang chủ</a></li>
                 <li class="grid">
                     <a class="color2" href="#">Nam</a>
                     <div class="megapanel">
@@ -327,7 +327,7 @@
                             </div>
                             <div class="col1">
                                 <div class="h_nav">
-                                    <h4>account</h4>
+                                    <!--<h4>account</h4>
                                     <ul>
                                         <li><a href="/Home/Shop">login</a></li>
                                         <li><a href="/Home/Shop">create an account</a></li>
@@ -336,6 +336,7 @@
                                         <li><a href="/Home/Shop">brands</a></li>
                                         <li><a href="/Home/Shop">create wishlist</a></li>
                                     </ul>
+                                    -->
                                 </div>
                             </div>
                             <div class="col1">
@@ -376,7 +377,7 @@
                 </li>
                 <li>
                     <a class="color7" href="#">Phá cách</a>
-                    <div class="megapanel">
+                   <!--<div class="megapanel">
                         <div class="row">
                             <div class="col1">
                                 <div class="h_nav">
@@ -464,9 +465,10 @@
                             <div class="col1"></div>
                             <div class="col1"></div>
                         </div>
-                    </div>
+                    </div> --> 
                 </li>
                 <li>
+                    <!-- 
                     <a class="color8" href="#">Shop</a>
                     <div class="megapanel">
                         <div class="row">
@@ -603,7 +605,9 @@
                 </li>
                 <li><a class="color10" href="#">Running</a></li>
                 <li><a class="color11" href="#">Originals</a></li>
-                <li><a class="color12" href="#">Basketball</a></li>
+                <li><a class="color12" href="#">Basketball</a></li> 
+               -->
+            
             </ul>
             <div class="clear"></div>
         </div>
@@ -614,17 +618,17 @@
             <div class="wrap">
                 <div class="col_1_of_footer-top span_1_of_footer-top">
                     <ul class="f_list">
-                        <li><img src="~/Content/images/f_icon.png" alt="" /><span class="delivery">Free delivery on all orders over £100*</span></li>
+                        <li><img src="~/Content/images/f_icon.png" alt="" /><span class="delivery">Miễn phí vận chuyển cho đơn hàng từ 1.000.000</span></li>
                     </ul>
                 </div>
                 <div class="col_1_of_footer-top span_1_of_footer-top">
                     <ul class="f_list">
-                        <li><img src="~/Content/images/f_icon1.png" alt="" /><span class="delivery">Customer Service :<span class="orange"> (800) 000-2587 (freephone)</span></span></li>
+                        <li><img src="~/Content/images/f_icon1.png" alt="" /><span class="delivery">Chăm sóc khách hàng :<span class="orange"> 0941042150 (miễn phí)</span></span></li>
                     </ul>
                 </div>
                 <div class="col_1_of_footer-top span_1_of_footer-top">
                     <ul class="f_list">
-                        <li><img src="~/Content/images/f_icon2.png" alt="" /><span class="delivery">Fast delivery & free returns</span></li>
+                        <li><img src="~/Content/images/f_icon2.png" alt="" /><span class="delivery">Giao hàng nhanh và đổi trả hàng miễn phí</span></li>
                     </ul>
                 </div>
                 <div class="clear"></div>
@@ -634,24 +638,11 @@
             <div class="wrap">
                 <div class="section group">
                     <div class="col_1_of_middle span_1_of_middle">
-                        <dl id="sample" class="dropdown">
-                            <dt><a href="#"><span>Please Select a Country</span></a></dt>
-                            <dd>
-                                <ul>
-                                    <li><a href="#">Australia<img class="flag" src="~/Content/images/as.png" alt="" /><span class="value">AS</span></a></li>
-                                    <li><a href="#">Sri Lanka<img class="flag" src="~/Content/images/srl.png" alt="" /><span class="value">SL</span></a></li>
-                                    <li><a href="#">Newziland<img class="flag" src="~/Content/images/nz.png" alt="" /><span class="value">NZ</span></a></li>
-                                    <li><a href="#">Pakistan<img class="flag" src="~/Content/images/pk.png" alt="" /><span class="value">Pk</span></a></li>
-                                    <li><a href="#">United Kingdom<img class="flag" src="~/Content/images/uk.png" alt="" /><span class="value">UK</span></a></li>
-                                    <li><a href="#">United States<img class="flag" src="~/Content/images/us.png" alt="" /><span class="value">US</span></a></li>
-                                </ul>
-                            </dd>
-                        </dl>
+
                     </div>
                     <div class="col_1_of_middle span_1_of_middle">
                         <ul class="f_list1">
                             <li>
-                                <span class="m_8">Sign up for email and Get 15% off</span>
                                 <div class="clear"></div>
 
                             </li>
@@ -661,7 +652,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
+        <!-- <div class="footer-bottom">
             <div class="wrap">
                 <div class="section group">
                     <div class="col_1_of_5 span_1_of_5">
@@ -817,10 +808,11 @@
                     <div class="clear"></div>
                 </div>
             </div>
-        </div>
+        </div> -->
+       
         <div class="copy">
             <div class="wrap">
-                <p>© All rights reserved | Template by&nbsp;<a href="http://w3layouts.com/"> W3Layouts</a></p>
+                <p>© All rights reserved</p>
             </div>
         </div>
     </div>
@@ -840,5 +832,6 @@
 			});
     </script>
     <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+    @RenderSection("jsFooter", required: false);
 </body>
 </html>

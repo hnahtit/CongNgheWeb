@@ -1,0 +1,53 @@
+﻿@model List<WEB_ShoesStore.Models.Functions.F_CartItem>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section jsFooter{
+<script src="/Content/js/controller/cartController.js"></script>
+    }
+<div class="content">
+    <div class="section group">
+        @if (Model.Count > 0)
+        {
+            <table>
+                <thead>
+                    <tr>
+                        <td>Ma SP</td>
+                        <td>Ten SP</td>
+                        <td>Anh SP</td>
+                        <td>So luong</td>
+                        <td>Don gia</td>
+                        <td>Thanh tien</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                {
+                        <tr>
+                            <td>@item.Product.Product_ID</td>
+                            <td>@item.Product.Product_Name</td>
+                            <td><img src="~/Content/images/@item.Product.Src1" width="100" /></td>
+                            <td><input type="text" class="txtQuantity" data-id="@item.Product.Product_ID" value="@item.Quantity" /></td>
+                            <td>@item.Product.Price.GetValueOrDefault(0).ToString("N0")</td>
+                            <td>@((item.Product.Price.GetValueOrDefault(0) * item.Quantity).ToString("N0"))</td>
+                            <td><a href="#" data-id="@item.Product.Product_ID" class="btn-delete1">Xóa</a></td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+            <button id="btnContinue" class="btn">Tiếp tục mua hàng</button>
+            <button id="btnUpdate" class="btn">Cập nhật giỏ hàng</button>
+            <button id="btnDeleteAll" class="btn">Xóa giỏ hàng</button>
+            <button id="btnPayment" class="btn">Thanh toán</button>
+
+        }
+        else
+        {
+            <span class="alert alert-error">Chưa có sản phẩm nào trong giỏ hàngg</span>
+        }
+    </div>
+
+</div>

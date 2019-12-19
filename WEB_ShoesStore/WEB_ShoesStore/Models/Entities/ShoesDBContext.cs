@@ -88,6 +88,10 @@ namespace WEB_ShoesStore.Models.Entities
                 .IsUnicode(false);
 
             modelBuilder.Entity<Order>()
+                .Property(e => e.ID)
+                .IsFixedLength();
+
+            modelBuilder.Entity<Order>()
                 .Property(e => e.ShipMobile)
                 .IsUnicode(false);
 
