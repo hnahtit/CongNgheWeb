@@ -16,8 +16,8 @@ namespace WEB_ShoesStore.Models.Entities
 
         [Key]
         [Column(Order = 1)]
-        [StringLength(20)]
-        public string OrderID { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public long OrderID { get; set; }
 
         public int? Quantity { get; set; }
 

@@ -9,8 +9,8 @@ namespace WEB_ShoesStore.Models.Entities
     [Table("Order")]
     public partial class Order
     {
-        [StringLength(20)]
-        public string ID { get; set; }
+        [Key]
+        public long MADON { get; set; }
 
         public DateTime? CreateDate { get; set; }
 

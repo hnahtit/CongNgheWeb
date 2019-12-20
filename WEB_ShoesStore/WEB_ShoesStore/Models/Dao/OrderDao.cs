@@ -13,11 +13,11 @@ namespace WEB_ShoesStore.Models.Dao
         {
             db = new ShoesDBContext();
         }
-        public string Insert(Order order)
+        public long Insert(Order order)
         {
             db.Orders.Add(order);
             db.SaveChanges();
-            return order.ID; //order kieu bigint
+            return order.MADON; //order kieu bigint
         }
     }
 }

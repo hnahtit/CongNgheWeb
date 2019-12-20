@@ -12,7 +12,6 @@ namespace WEB_ShoesStore.Controllers
 {
     public class CartController : Controller
     {
-        
         public const string CartSession = "CartSession";
         // GET: Cart
         public ActionResult Index()
@@ -122,8 +121,10 @@ namespace WEB_ShoesStore.Controllers
         [HttpPost]
         public ActionResult Payment(string Shipname, string mobile, string Address, string email)
         {
+            
             var order = new Order();
             order.CreateDate = DateTime.Now;
+            order.ShipName = Shipname;
             order.ShipAddress = Address;
             order.ShipMobile = mobile;
             order.ShipEmail = email;
@@ -136,8 +137,8 @@ namespace WEB_ShoesStore.Controllers
                 foreach (var item in cart)
                 {
                     var orderDetail = new OrderDetail();
+                    orderDetail.OrderID = id;
                     orderDetail.ProductID = item.Product.Product_ID;
-                orderDetail.OrderID = "1";
                     orderDetail.Price = item.Product.Price;
                     orderDetail.Quantity = item.Quantity;
                     detailDao.Insert(orderDetail);

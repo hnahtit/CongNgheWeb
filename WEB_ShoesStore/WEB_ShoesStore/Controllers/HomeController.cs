@@ -40,7 +40,7 @@ namespace WEB_ShoesStore.Controllers
         {     
             var model = new F_Product().DS_Product.Where(x => x.Product_Name.Contains(s)).ToList();
             ViewBag.SP = model;
-            return View("Index", model);
+            return View("Shop", model);
         }
         // GET: DangKy
         [HttpGet]
